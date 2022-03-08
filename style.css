@@ -1,16 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap");
 /*font weights: 200, 400, 600 */
 
-:root{
-    --bg:#E5E5E5;
-    --font-color:#3C405B;
-    --brown:#A6785E;
-    --mint-blue:#728A8E;
-    --navy-blue:#3C405B;
-    --broken-white:#F6F8F7;
+:root {
+  --bg: #e5e5e5;
+  --font-color: #3c405b;
+  --brown: #a6785e;
+  --mint-blue: #728a8e;
+  --navy-blue: #3c405b;
+  --broken-white: #f6f8f7;
 
+  --para-font: "Lexend Deca", sans-serif;
+  --margin: 0;
+}
 
-    --para-font:'Lexend Deca', sans-serif;
-    --margin:0;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+header {
+  background-color: var(--broken-white);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--navy-blue);
+  text-decoration: none;
+  font-family: var(--para-font);
+}
+
+.navBar {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.logoContainer {
+  max-width: 96px;
+}
+.logo {
+  max-width: 100%;
+  padding: 10px;
+}
+
+.navLink{
+    transition: .7s ease;
+}
+
+.navLink:hover{
+    color: #a6785e;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: px;
+    height: 3px;
+    background-color: var(--navy-blue);
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+}
+
+@media(max-width:768px){
+    .burger{
+        display: block;
+        
+    }
+    /* .active will be activated ij js */
+    .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .navMenu{
+        position: fixed;
+        left: -100%;
+        top: 119px;
+        gap: 40px;
+        flex-direction: column;
+        background-color: var(--broken-white);
+        width: 100%;
+        text-align: center;
+        transition: .7s;
+    }
+
+    .navItem{
+        margin: 16px 0;
+
+    }
+    .navMenu.active{
+        left: 0;
+    }
 }
