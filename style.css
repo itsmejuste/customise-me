@@ -1,16 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;400;600&display=swap");
 /*font weights: 200, 400, 600 */
 
-:root{
-    --bg:#E5E5E5;
-    --font-color:#3C405B;
-    --brown:#A6785E;
-    --mint-blue:#728A8E;
-    --navy-blue:#3C405B;
-    --broken-white:#F6F8F7;
+@import url("https://use.typekit.net/vbs6kia.css");
+/* font weights: 400, 500, 600, 700 */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    --para-font:'Lexend Deca', sans-serif;
-    --margin:0;
+img {
+  max-width: 100%;
+}
 
+:root {
+  --bg: #e5e5e5;
+  --font-color: #3c405b;
+  --brown: #a6785e;
+  --mint-blue: #728a8e;
+  --navy-blue: #3c405b;
+  --broken-white: #f6f8f7;
+
+  --para-font: "Lexend Deca", sans-serif;
+  --h1-font: "new-order", sans-serif;
+  --margin: 0;
+}
+
+/* PRODUCT VIEW */
+
+body {
+  color: var(--font-color);
+  background-color: var(--broken-white);
+}
+
+main {
+  margin: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product_view h2,
+.product_view h3,
+.product_view h4,
+.product_view p {
+  font-family: var(--para-font);
+}
+
+.product_view h2 {
+  font-size: 1.5rem;
+}
+
+.product_view h3 {
+  font-size: 1.3rem;
+}
+
+.wraper_product {
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.wraper_product_2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.wraper_product_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wraper_product_row_2 {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5rem;
+}
+
+/* Add to car button */
+.add_to_cart {
+  font-family: var(--para-font);
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  color: var(--broken-white);
+  background-color: var(--navy-blue);
+  text-align: center;
+  width: 200px;
+  border-radius: 7px;
+  align-self: center;
 }
