@@ -96,4 +96,5 @@ a {
   width: 200px;
   border-radius: 7px;
   align-self: center;
+  box-shadow: 5px 5px 5px rgb(60, 64, 91, 0.7);
 }
