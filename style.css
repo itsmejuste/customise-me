@@ -34,15 +34,14 @@ body {
   background-color: var(--broken-white);
 }
 
-main {
-  margin: 3rem;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
+.m_m_product {
+  margin: 3rem;
+}
 .product_view h2,
 .product_view h3,
 .product_view h4,
@@ -89,12 +88,15 @@ a {
   font-family: var(--para-font);
   display: inline-block;
   padding: 1rem 2rem;
-  margin: 0;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--broken-white);
   background-color: var(--navy-blue);
-  text-align: center;
   width: 200px;
   border-radius: 7px;
+  display: flex;
   align-self: center;
+  justify-content: center;
   box-shadow: 5px 5px 5px rgb(60, 64, 91, 0.7);
 }
