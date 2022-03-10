@@ -359,6 +359,11 @@ footer {
     padding: 1rem 3rem;
     border-radius: 8px;
   }
+  .homepage-customise {
+    display: block;
+    height: auto;
+
+  }
   .homepage-workshops > p{
     font-size: 1rem;
   }
