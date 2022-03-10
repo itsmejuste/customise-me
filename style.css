@@ -14,3 +14,29 @@
     --margin:0;
 
 }
+/*customise page*/
+.collapsible {
+    background-color:var(--broken-white);
+    color:var(--navy-blue);
+    cursor: pointer;
+    padding: 2rem;
+    margin: 0.5rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+  }
+ .active, .collapsible:hover {
+    background-color: #ccc;
+}
+.content-customise {
+    margin: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  
