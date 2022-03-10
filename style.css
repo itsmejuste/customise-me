@@ -27,6 +27,7 @@ li {
   list-style: none;
 }
 
+/* we can meke a pop up if we have set font size */
 a {
   color: var(--navy-blue);
   text-decoration: none;
@@ -34,7 +35,7 @@ a {
 }
 
 .navBar {
-  min-height: 100px;
+  min-height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,69 +49,337 @@ a {
   gap: 60px;
 }
 
+/* extra div inside navMenu */
+.extra {
+  display: flex;
+  justify-content: flex-end;
+  gap: 100px;
+}
+
+.svgIcon {
+  color: #3c405b;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  gap: 15px;
+}
+
 .logoContainer {
   max-width: 96px;
+  min-width: 40px;
+  align-items: center;
 }
 .logo {
   max-width: 100%;
   padding: 10px;
+  align-items: center;
 }
 
-.navLink{
-    transition: .7s ease;
+.navLink {
+  transition: 0.7s ease;
 }
 
-.navLink:hover{
-    color: #a6785e;
+.navLink:hover {
+  color: #a6785e;
+  font-size: 1.1rem;
 }
 
-.burger{
-    display: none;
-    cursor: pointer;
+.burger {
+  display: none;
+  cursor: pointer;
 }
 
-.bar{
+.bar {
+  display: block;
+  width: 30px;
+  height: 4px;
+  border-radius: 40px;
+  background-color: var(--navy-blue);
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+/* MAIN SECTION */
+
+.main-homepage {
+  z-index: -10;
+}
+
+#landingPicture {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+/* homepage-background container */
+.homepage-background {
+  height: 70vw;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.homepage-background > h1 {
+  font-family: var(--para-font);
+  /* text-transform: capitalize; */
+  font-size: 3em;
+}
+
+.pictureHeadingH1 {
+  position: absolute;
+  top: 10%;
+  left: 11%;
+}
+
+.seeMoreButton {
+  color: var(--broken-white);
+  font-size: 2rem;
+  background-color: var(--mint-blue);
+  padding: 1rem 4rem;
+  border-radius: 8px;
+  display: inline-block;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 0.6s ease;
+}
+
+.seeMoreButton:hover {
+  font-size: 2.3em;
+  background-color: var(--broken-white);
+  color: var(--mint-blue);
+  padding: 1rem 4rem;
+  border-radius: 8px;
+}
+
+p {
+  color: var(--font-color);
+  font-size: 1.6rem;
+  font-family: var(--para-font);
+  text-align: center;
+  margin: 2em;
+}
+
+.homepage-customise {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 0.5%;
+  justify-content: center;
+  height: 70vh;
+}
+
+.buyNowDiv {
+  grid-column: 1/2;
+  align-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.customizeHeading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.customizeDiv {
+  grid-column: 2/3;
+  align-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.customizePicture {
+  max-width: 100%;
+
+}
+.buy-customise-button {
+  background-color: none;
+  color: var(--broken-white);
+  border: solid 2px var(--broken-white);
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  border-radius: 8px;
+  display: inline-block;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  transition: 0.6s ease;
+}
+
+.buy-customise-button:hover {
+  font-size: 2.3em;
+  background-color: var(--broken-white);
+  color: var(--mint-blue);
+  border: solid 1px var(--broken-white);
+  padding: 1rem 4rem;
+  border-radius: 8px;
+}
+
+#SighnUpPicture {
+  max-width: 100%;
+  max-height: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: fit-content;
+}
+
+.signUpButton {
+ background-color: var(--broken-white);
+    color: var(--font-color);
+    border: solid 1px var(--broken-white);
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    border-radius: 8px;
+    display: inline-block;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: 0.6s ease;
+  }
+
+  .signUpButton:hover {
+    font-size: 2.3em;
+    background-color: var(--mint-blue);
+    color: var(--broken-white);
+    border: solid 1px var(--broken-white);
+    padding: 1rem 4rem;
+    border-radius: 8px;
+  }
+
+
+/* homepage-background container */
+.homepage-workshops {
+  height: fit-content;
+  position: relative;
+  text-align: center;
+  color: white;
+  margin: var(--margin);
+}
+.homepage-workshops > p {
+  font-family: var(--para-font);
+  color: var(--broken-white);
+  /* text-transform: capitalize; */
+  font-size: 3em;
+  margin: var(--margin);
+}
+
+.paragraph2 > h2{
+  font-family: var(--para-font);
+}
+
+.hereLink {
+  color: var(--mint-blue);
+}
+
+footer {
+  background: var(--broken-white);
+  font-family: var(--para-font);
+  color: var(--font-color);
+  height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .burger {
     display: block;
-    width: px;
-    height: 3px;
-    background-color: var(--navy-blue);
-    margin: 5px auto;
-    transition: all .3s ease-in-out;
-}
+  }
+  /* .active for burgermenu will be activated in js */
+  .burger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(47deg);
+  }
+  .burger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-@media(max-width:768px){
-    .burger{
-        display: block;
-        
-    }
-    /* .active will be activated ij js */
-    .burger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .burger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .burger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    .navMenu{
-        position: fixed;
-        left: -100%;
-        top: 119px;
-        gap: 40px;
-        flex-direction: column;
-        background-color: var(--broken-white);
-        width: 100%;
-        text-align: center;
-        transition: .7s;
-    }
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 111px;
+    gap: 40px;
+    flex-direction: column;
+    background-color: var(--broken-white);
+    width: 100%;
+    text-align: center;
+    transition: 0.7s;
+    z-index: 1;
+  }
+  .extra {
+    justify-self: end;
+  }
+  /* Doesnt work, icons stands in the center instead of flexend and margin shouldn be used*/
+  .icons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-left: 50vw;
+  }
+  .navItem {
+    margin: 16px 0;
+  }
+  .navMenu.active,
+  .seeMoreButton {
+    left: 0;
+  }
+  .pictureHeading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .homepage-background > h1 {
+    font-family: var(--para-font);
+    /* text-transform: capitalize; */
+    font-size: 2em;
+  }
+  .seeMoreButton, .signUpButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--mint-blue);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+  }
+  .homepage-workshops > p{
+    font-size: 1rem;
+  }
+  .seeMoreButton:hover {
+    font-size: 1em;
+    background-color: var(--broken-white);
+    color: var(--mint-blue);
+    padding: 1rem 4rem;
+    border-radius: 8px;
+  }
 
-    .navItem{
-        margin: 16px 0;
-
-    }
-    .navMenu.active{
-        left: 0;
-    }
+  .buyNowDiv {
+    grid-column: 1/3;
+    align-content: center;
+    position: relative;
+    text-align: center;
+  }
+  .customizeDiv {
+    grid-column: 1/3;
+    align-content: center;
+    position: relative;
+    text-align: center;
+  }
 }
